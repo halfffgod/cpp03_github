@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 
-int main() {
+int main() 
+{
     std::cout << "Creating a FragTrap:\n";
     FragTrap frag("Fraggy");
     std::cout << "\n"; // constructor chaining 

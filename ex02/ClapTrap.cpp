@@ -1,10 +1,12 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(const std::string &name): name(name), hit_points(10), energy_points(10), attack_damage(0) {
+ClapTrap::ClapTrap(const std::string &name): name(name), hit_points(10), energy_points(10), attack_damage(0) 
+{
 	std::cout << name << " ClapTrap Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(): name("Default"), hit_points(10), energy_points(10), attack_damage(0) {
+ClapTrap::ClapTrap(): name("Default"), hit_points(10), energy_points(10), attack_damage(0) 
+{
 	std::cout << "Default ClapTrap  called" << std::endl;
 }
 
@@ -12,7 +14,8 @@ ClapTrap::~ClapTrap(){
 	std::cout << name << " Is DEAAAD" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &objs){
+ClapTrap::ClapTrap(const ClapTrap &objs)
+{
 	std::cout << " ClapTrap Copy constructor called" << std::endl;
 	name = objs.name;
 	attack_damage = objs.attack_damage;
@@ -20,7 +23,8 @@ ClapTrap::ClapTrap(const ClapTrap &objs){
 	hit_points = objs.hit_points;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &objs){
+ClapTrap &ClapTrap::operator=(const ClapTrap &objs)
+{
 	if (this != &objs){
 		name = objs.name;
 		attack_damage = objs.attack_damage;
@@ -30,7 +34,8 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &objs){
 	return (*this);
 }
 
-void	ClapTrap::attack(const std::string &target){
+void	ClapTrap::attack(const std::string &target)
+{
 	if (hit_points > 0 && energy_points > 0){
 		std::cout << "ClapTrap " << name << " attacks " << target <<" causing " << attack_damage << " points of damage!" << std::endl;
 		energy_points--;
@@ -42,7 +47,8 @@ void	ClapTrap::attack(const std::string &target){
 }
 
 
-void ClapTrap::beRepaired(unsigned int amount){
+void ClapTrap::beRepaired(unsigned int amount)
+{
 	if (energy_points > 0){
 		std::cout << name  << " got " << amount << " hit points back :D !!" << std::endl;
 		hit_points += amount;
@@ -53,7 +59,8 @@ void ClapTrap::beRepaired(unsigned int amount){
 	}
 }
 
-void ClapTrap::takeDamage(unsigned int amount) {
+void ClapTrap::takeDamage(unsigned int amount) 
+{
 	if (hit_points > 0){
 		std::cout << name << " absorbed " << amount << " damage D: !! " << std::endl;
 		hit_points -= amount;

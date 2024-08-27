@@ -4,7 +4,8 @@
 
 #include <iostream>
 
-class ClapTrap {
+class ClapTrap 
+{
     protected :
         std::string name;
         int hit_points;
