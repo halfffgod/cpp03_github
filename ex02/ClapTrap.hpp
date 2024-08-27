@@ -6,10 +6,10 @@
 
 class ClapTrap {
     protected :
-        std::string _name;
-        int _hitPoints;
-        int _EnergyPoints;
-        int _AttackDamage;
+        std::string name;
+        int hit_points;
+        int energy_points;
+        int attack_damage;
     public:
         ClapTrap(const std::string &name);
         ClapTrap();

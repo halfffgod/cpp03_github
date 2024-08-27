@@ -2,16 +2,16 @@
 
 FragTrap::FragTrap(): ClapTrap("Default"){
     std::cout << "Default FragTrap constructor called" << std::endl;
-    _hitPoints = 100;
-    _EnergyPoints = 100;
-    _AttackDamage = 30;
+    hit_points = 100;
+    energy_points = 100;
+    attack_damage = 30;
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
     std::cout << name << " FragTrap constructor have been called" << std::endl;
-    _hitPoints = 100;
-    _EnergyPoints = 100;
-    _AttackDamage = 30;
+    hit_points = 100;
+    energy_points = 100;
+    attack_damage = 30;
 }
 
 FragTrap::~FragTrap(){
@@ -20,34 +20,34 @@ FragTrap::~FragTrap(){
 
 FragTrap::FragTrap(const FragTrap &objs){
     std::cout << "FragTrap copy constructor have been called for this object" << std::endl;
-    _name = objs._name;
-	_AttackDamage = objs._AttackDamage;
-	_EnergyPoints = objs._EnergyPoints;
-	_hitPoints = objs._hitPoints;
+    name = objs.name;
+	attack_damage = objs.attack_damage;
+	energy_points = objs.energy_points;
+	hit_points = objs.hit_points;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &objs){
     std::cout << "FragTrap Assignment operator called" << std::endl;
     if (this != &objs){
-        _name = objs._name;
-		_AttackDamage = objs._AttackDamage;
-		_EnergyPoints = objs._EnergyPoints;
-		_hitPoints = objs._hitPoints;
+        name = objs.name;
+		attack_damage = objs.attack_damage;
+		energy_points = objs.energy_points;
+		hit_points = objs.hit_points;
     }
     return (*this);
 }
 
 void FragTrap::highFivesGuys(void) {
-    std::cout << "FragTrap " << _name << " requests a positive high five!" << std::endl;
+    std::cout << "FragTrap " << name << " requests a positive high five!" << std::endl;
 }
 
 void FragTrap::attack(const std::string &target) {
-    if (_hitPoints > 0 && _EnergyPoints > 0){
-		std::cout << "FragTrap " << _name << " attacks " << target <<" causing " << _AttackDamage << " points of damage!" << std::endl;
-		_EnergyPoints--;
+    if (hit_points > 0 && energy_points > 0){
+		std::cout << "FragTrap " << name << " attacks " << target <<" causing " << attack_damage << " points of damage!" << std::endl;
+		energy_points--;
 	}
-	else if (_hitPoints <= 0)
-		std::cout << _name << " Does not have enough Hit Points D;" << std::endl;
-	else if (_EnergyPoints <= 0)
-		std::cout << _name << " Does not have enough Energyy D;" << std::endl;
+	else if (hit_points <= 0)
+		std::cout << name << " Does not have enough Hit Points D;" << std::endl;
+	else if (energy_points <= 0)
+		std::cout << name << " Does not have enough Energyy D;" << std::endl;
 }
