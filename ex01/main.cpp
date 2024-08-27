@@ -2,7 +2,8 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-int main() {
+int main()
+{
     std::cout << "Testing ScavTrap constructors and attack...\n";
 
     {

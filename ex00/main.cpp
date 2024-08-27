@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-int main() {
+int main()
+{
     std::cout << "Testing constructors and assignment...\n";
 
     {

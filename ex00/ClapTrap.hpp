@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-class ClapTrap {
+class ClapTrap
+{
     private:
         std::string name;
         int hit_points;
