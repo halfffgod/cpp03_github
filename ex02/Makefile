@@ -1,6 +1,6 @@
-NAME		= fixed
-SRC			= main.cpp Fixed.cpp
-OBJ			= main.o Fixed.o
+NAME		= repetitive
+SRC			= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+OBJ			= main.o ClapTrap.o ScavTrap.o FragTrap.o
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f

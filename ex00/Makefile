@@ -1,6 +1,6 @@
-NAME		= fixed
-SRC			= main.cpp Fixed.cpp
-OBJ			= main.o Fixed.o
+NAME		= open
+SRC			= main.cpp ClapTrap.cpp
+OBJ			= main.o ClapTrap.o
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f
